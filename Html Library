@@ -1,0 +1,390 @@
+
+<!--is at the begging and end of a html code-->
+<!DOCTYPE html><!--this is a decaration-->
+<html lang="en-us">
+    <!--Meta data goes into the head tags-->
+    <head>
+        <title>Html Libary</title>
+        <script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+   </script>
+   <style>
+a:link {
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+   <!--meta ="description" describes the content-->
+<meta name="description" content="150 words"/>
+<meta name="keywords" content="Adds keywords to be found">
+<meta name="subject" content="your website's subject">
+<!--<meta name="copyright"content="copry">-->
+<meta name="language" content="ES">
+<meta name="robots" content="index,follow" />
+<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" />
+<meta name="abstract" content="">
+<meta name="topic" content="">
+<meta name="summary" content="">
+<meta name="Classification" content="Business">
+<meta name="author" content="name, email@hotmail.com">
+<meta name="designer" content="">
+<meta name="copyright" content="">
+<meta name="reply-to" content="email@hotmail.com">
+<meta name="owner" content="">
+<meta name="url" content="http://www.websiteaddrress.com">
+<meta name="identifier-URL" content="http://www.websiteaddress.com">
+<meta name="directory" content="submission">
+<meta name="category" content="">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<meta name="rating" content="General">
+<meta name="revisit-after" content="7 days">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+    </head>
+     <body bgcolor="#ffffff">
+          <p id="top">top</p>
+        <!--how to make you background a different color-->
+        <!--how to change text-->
+        <p>This is regular text </p>
+        <p><b>bold text </b></p>
+        <p><big> big text </big></p>
+        <p><i> italic text </i></p>
+        <p><small> small text </small></p>
+        <p><strong> strong text </strong></p>
+        <p><sub> subscripted text </sub></p>
+        <p><sup> superscripted text </sup></p>
+        <p><ins> inserted text </ins></p>
+        <p><del> deleted text </del></p>
+        <!-- they get smaller as the number increases-->
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5>This is heading 5</h5>
+        <h6>This is heading 6</h6>
+    <!--this is a comment-->          
+    <!-- how to make a horizontal line-->          
+              <hr />
+    <!--makes the horizontal line bigger or smaller-->
+    <hr width="50px" />
+    <hr width="50%" />
+    <!--how text is aligned-->
+     <p style="text-align:center">This is a text <br />
+         <hr width="10%" style="line-align:right" /> This is also a text.
+    <!--inserts an image-->
+    <img src="image.jpg" />
+    <!--how to scale a image and a border-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" height="150px" width="150px" border="1px" alt="" align = "right"/>
+    
+    <!--how to make a link-->
+    <!--to name you link put it after the arrow brackets-->
+    <a href="https://commons.wikimedia.org/wiki/File:Red_Apple.jpg">same tab|</a>
+    <!--"_blank opens the link in a new tab and is placed inside the arrow brackets and outside the quotaion marks"-->
+    <!--space after qoutaions, and blank has to be in "" as well-->
+    <a href="https://commons.wikimedia.org/wiki/File:Red_Apple.jpg" target="_blank">new tab</a>
+      <!--ol makes an ordered list , li is the contents-->
+       <ol>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+      </ol>  
+      <!--ul is an unordered list-->
+      <ul>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+      </ul> 
+      <!--makes a table with border-->
+      <!--used to define two or more cells-->
+      <table border="20">
+        <tr>
+      <!--how to make your background color-->
+          <td bgcolor="red">Red</td>
+          <td>Blue</td>
+          <td>Green</td>
+      
+  
+        </tr>
+        <tr>
+      <!--how to use colspan-->
+          <td>Yellow</td>
+          <td colspan="1">Orange</td>
+          <td>White</td>
+    
+      
+        </tr>
+      </table>
+      <!--how to make you backrond and text color-->
+      <div style="background-color:teal; color:white; padding:20px;">
+            <p>Some paragraph text goes here.</p>
+            <p>Another paragraph goes here.</p>
+        </div>
+      <!--insert elements-->
+      <p><strong>types of elements<br/>
+      APPLET - embedded Java applet<br/>
+      IFRAME - Inline frame<br/>
+      INS - inserted text<br/>
+      MAP - image map<br/>
+      OBJECT - embedded object<br/>
+      SCRIPT - script within an HTML document<br/>
+      </strong>
+      </p>
+      <!--how to use forms-->
+       <form action="http://www.sololearn.com"> 
+      </form>
+        <!--use get for less senstive info-->
+        <form action="url" method="GET"></form>
+        <!--use post when sensitive info is used-->
+        <form action="url" method="POST"></form>
+        
+      <!--input type text and password-->
+      <form>
+        <p>Username</p>
+        <input type="text" name="username" /><br>
+        <p>Password</p>
+        <input type="password" name="password" />
+        </form>
+        <!--input type raido-->
+        <p>Gender</p>
+        <input type="radio" name="gender" value="male" /> Male <br />
+        <input type="radio" name="gender" value="female" /> Female <br />
+        <!--input type checkbox-->
+        <input type="checkbox" name="gender" value="1" /> Male <br />
+        <input type="checkbox" name="gender" value="2" /> Female <br />
+        <!--input has no end tag-->
+        <!--submit button --><!--name-->
+        <input type="submit" value="dumb" /> 
+        <form>
+  <input name="name" type="text" /><br/>
+  <input name="email" type="email" /><br/>
+  <textarea name="message"></textarea>
+  <input type="submit" value="SEND" class="submit" />
+   </form>
+    <!--how to make text a differnt color-->
+    <!--to make a color you have to put a hash tag infront of it-->
+       <h1>
+        <font color="#f4343r"> White headline </font>
+       </h1> 
+      <!-- <frameset cols="100, 25%, *"></frameset>
+       <frameset rows="100, 25%, *"></frameset> is not supported in html5-->
+        <!--How to make a bar-->
+        <li>JavaScript <br />
+        <progress min="0" max="100" value="50"></progress>
+        </li>
+        <h2>Some 
+      <span style="color:red">Important</span>
+       Message</h2>
+         <!--how to add a frame-->
+         <iframe height="150" width="300" src="https://www.youtube.com/embed/Q6_5InVJZ88" allowfullscreen frameborder="0"></iframe>
+         <!--HTML5 from now on-->
+        <!-- When writing HTML5 documents, one of the first new features that you'll notice is the doc type declaration:
+        <!DOCTYPE HTML> 
+
+The character encoding (charset) declaration is also simplified:
+<meta charset="UTF-8">-->
+<!--Metadata: Content that sets up the presentation or behavior of the rest of the content. These elements are found in the head of the document.
+Elements: <base>, <link>, <meta>, <noscript>, <script>, <style>, <title>
+
+Embedded: Content that imports other resources into the document.
+Elements: <audio>, <video>, <canvas>, <iframe>, <img>, <math>, <object>, <svg>
+
+Interactive: Content specifically intended for user interaction.
+Elements: <a>, <audio>, <video>, <button>, <details>, <embed>, <iframe>, <img>, <input>, <label>, <object>, <select>, <textarea>
+
+Heading: Defines a section header.
+Elements: <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <hgroup>
+
+Phrasing: This model has a number of inline level elements in common with HTML4.
+Elements: <img>, <span>, <strong>, <label>, <br />, <small>, <sub>, and more.
+
+Flow content: Contains the majority of HTML5 elements that would be included in the normal flow of the document.
+
+Sectioning content: Defines the scope of headings, content, navigation, and footers.
+Elements: <article>, <aside>, <nav>, <section>-->
+   <!--use h1-6 in header-->
+    <header>
+        <h1> Most important heading </h1>
+        <h3> Less important heading </h3>
+      </header>
+      <footer>…</footer>
+
+<!--The following information is usually provided between these tags:
+- Contact Information
+- Privacy Policy
+- Social Media Icons
+- Terms of Service
+- Copyright Information
+- Sitemap and Related Documents-->
+<!--This tag represents a section of a page that links to other pages or to certain sections within the page. This would be a section with navigation links-->
+<!-- how to use nav
+Here is an example of a major block of navigation links:-->
+<nav>
+   <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About us</a></li>
+   </ul>
+</nav>
+
+<!--Not all of the links in a document should be inside a <nav> element. The <nav> element is intended only for major blocks of navigation links. Typically, the <footer> element often has a list of links that don't need to be in a <nav> element.
+
+ Article is a self-contained, independent piece of content that can be used and distributed separately from the rest of the page or site. This could be a forum post, a magazine or newspaper article, a blog entry, a comment, an interactive widget or gadget, or any other independent piece of content.The <article> element replaces the <div> element that was widely used in HTML4, along with an id or class.-->
+
+<article>
+   <h1>Welcome</h1>
+   <section>
+     <!--<section> is a logical container of the page or article.
+Sections can be used to divide up content within an article.
+For example, a homepage could have a section for introducing the company, another for news items, and still another for contact information.Each <section> should be identified, typically by including a heading (h1-h6 element) as a child of the <section> element.--> 
+      <h1>Heading</h1>
+      <p>content or image</p>
+   </section>
+<!--<aside> is secondary or tangential content which could be considered separate from but indirectly related to the main content.This type of content is often represented in sidebars.When an <aside> tag is used within an <article> tag, the
+content of the <aside> should be specifically related to that article.-->
+      <aside>
+      <p> Gifts will be delivered to you within 24 hours </p>
+   </aside>
+</article>
+
+
+<!--When an <article> element is nested, the inner element represents an article related to the outer element. For example, blog post comments can be <article> elements nested in the <article> representing the blog post.-->
+
+<!--Before HTML5, there was no standard for playing audio files on a web page.
+The HTML5 <audio> element specifies a standard for embedding audio in a web page.
+
+There are two different ways to specify the audio source file's URL. The first uses the source attribute:-->
+<audio src="audio.mp3" controls>
+   <!--Audio element not supported by your browser-->
+</audio>
+
+
+<!--The second way uses the <source> element inside the <audio> element:-->
+<audio controls>
+   <source src="audio.mp3" type="audio/mpeg">
+   <source src="audio.ogg" type="audio/ogg">
+</audio>
+<!--The video element is similar to the audio element.
+You can specify the video source URL using an attribute in a video element, or using source elements inside the video element:-->
+<video controls>
+   <source src="video.mp4" type="video/mp4">
+   <source src="video.ogg" type="video/ogg">
+   Video is not supported by your browser
+</video>
+
+<!--The <progress> element provides the ability to create progress bars on the web.
+The progress element can be used within headings, paragraphs, or anywhere else in the body.
+
+Progress Element Attributes
+Value: Specifies how much of the task has been completed.
+Max: Specifies how much work the task requires in total.-->
+
+<p align ="left">
+Status: <progress min="0" max="100" value="35">
+</progress></p>
+<!--There are two types of web storage objects:
+- sessionStorage()
+- localStorage()
+Local vs. Session
+- Session Storage is destroyed once the user closes the browser
+- Local Storage stores data with no expiration date
+The syntax for web storage for both local and session storage is very simple and similar.
+The data is stored as key/value pairs.
+
+Storing a Value:
+localStorage.setItem("key1", "value1");>
+
+Getting a Value:
+//this will print the value
+alert(localStorage.getItem("key1")); 
+
+Removing a Value:
+localStorage.removeItem("key1");
+
+Removing All Values:
+localStorage.clear();
+
+The Geolocation API’s main method is getCurrentPosition, which retrieves the current geographic location of the user's device.
+navigator.geolocation.getCurrentPosition();
+
+Parameters:
+showLocation (mandatory): Defines the callback method that retrieves location information.
+ErrorHandler(optional): Defines the callback method that is invoked when an error occurs in processing the asynchronous call.
+Options (optional): Defines a set of options for retrieving the location information.
+-->
+<div id="box" ondrop="drop(event)"
+   ondragover="allowDrop(event)"
+   style="border:1px solid black; 
+   width:200px; height:200px"></div>
+
+   <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/661px-Red_Apple.jpg" draggable="true" ondragstart="drag(event)" width="50" height="50" alt="" />
+   <!--The preventDefault() method prevents the browser's default handling of the data (default is open as link on drop).
+The dragged data can be accessed with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method.
+The dragged data is the ID of the dragged element ("image").
+
+At the end, the dragged element is appended into the drop element, using the appendChild() function.
+In our example, the data type is "text" and the value is the ID of the draggable element ("image").
+
+Where to Drop
+The ondragover event specifies where the dragged data can be dropped. By default, data and elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.
+This is done by calling the event.preventDefault() method for the ondragover event.
+
+Do the Drop
+When the dragged data is dropped, a drop event occurs.
+In the example above, the ondrop attribute calls a function, drop(event):
+hat to Drag
+When the element is dragged, the ondragstart attribute calls a function, drag(event), which specifies what data is to be dragged.
+The dataTransfer.setData() method sets the data type and the value of the dragged data-->
+<img src="image.svg" alt="" height="300" />
+<p style="color:blue">Ethan</p>
+  <p style="font-family:verdana;">Ethan
+</p>
+<p style="font-size:300%;">Ethan</p>
+
+   <p style="font-size:300%; color:green; font-famliy-helvetica; text-align:right;">Ethan</p>
+   <p title="This is Spartan land now">Greece</p>
+   <p style="color:DodgerBlue;">Lorem ipsum...</p>
+   <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+   <h1 style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h1>
+   <h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+      <h1 style="background-color:hsl(0, 53%, 58%);">hsla(248, 53%, 58%, 1)</h1>
+<a href="#top">back to top</a><br>
+<div style="text-align:center">    
+  <a href="http//www.google.com">Search</a>
+  <!-- more links here -->
+</div>
+
+    </body>
+</html>
